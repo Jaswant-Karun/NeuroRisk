@@ -7,7 +7,6 @@ from backend.models.daily_input import DailyInput
 from backend.core.database import Base
 from backend.services import risk_scoring
 
-Base.metadata.create_all(bind=engine)
 
 router = APIRouter(prefix="/risk", tags=["Risk"])
 
