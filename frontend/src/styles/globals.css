@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  background: #f4f7fb;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.metric-card {
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.metric-card.purple { background: linear-gradient(135deg,#8b5cf6,#6366f1);}
+.metric-card.blue { background: linear-gradient(135deg,#3b82f6,#06b6d4);}
+.metric-card.red { background: linear-gradient(135deg,#ef4444,#f97316);}
+.metric-card.green { background: linear-gradient(135deg,#22c55e,#10b981);}
+
+.metric-card h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.metric-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.progress {
+  height: 6px;
+  background: rgba(255,255,255,.3);
+  border-radius: 6px;
+  margin: 15px 0 8px 0;
+}
+
+.progress div {
+  height: 100%;
+  background: white;
+  border-radius: 6px;
+}
+
+.metric-card span {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.big-chart {
+  grid-column: 1 / 2;
+}
+
+.side-donuts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  grid-row:span 2;
+}
+
+.bar-chart {
+  grid-column: 1 / 2;
+}
+
+.chart-card,
+.donut-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.chart-card h4, .donut-card h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+.donut-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.donut-card h4.percent {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    color: #111827;
+}
+
+/* Layout Styles */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #1e293b; /* Dark Slate */
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  color: #94a3b8;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.sidebar nav a:hover, .sidebar nav a.active {
+  background: #334155;
+  color: white;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.navbar {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.navbar h3 {
+    margin: 0;
+    color: #1f2937;
+    font-size: 1.1rem;
+}
+
+.content {
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
+}
