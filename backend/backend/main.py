@@ -3,7 +3,7 @@ from backend.core.database import Base, engine
 from backend.routers import risk
 from fastapi.middleware.cors import CORSMiddleware
 
-app.add_middleware(
+backend.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://neuro-risk-three.vercel.app/",
