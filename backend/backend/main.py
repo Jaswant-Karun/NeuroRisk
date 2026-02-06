@@ -3,7 +3,8 @@ from backend.core.database import Base, engine
 from backend.routers import risk
 from fastapi.middleware.cors import CORSMiddleware
 
-backend.add_middleware(
+app = FastAPI()
+app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "https://neuro-risk-three.vercel.app/",
@@ -15,7 +16,6 @@ backend.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
 
 @app.on_event("startup")
 def startup():
