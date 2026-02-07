@@ -7,9 +7,9 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://neuro-risk-three.vercel.app/",
-        "https://neuro-risk-git-main-jaswant-karun-s-as-projects.vercel.app/",
-        "https://neuro-risk-2t9lwbzln-jaswant-karun-s-as-projects.vercel.app/"  # Netlify/Vercel
+        "https://neuro-risk-three.vercel.app",
+        "https://neuro-risk-git-main-jaswant-karun-s-as-projects.vercel.app",
+        "https://neuro-risk-2t9lwbzln-jaswant-karun-s-as-projects.vercel.app"  # Netlify/Vercel
     ],
     allow_credentials=True,
     allow_methods=["*"],
